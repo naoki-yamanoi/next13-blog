@@ -1,7 +1,11 @@
 import React from "react";
 
 function page() {
-  return <div>article</div>;
+  return (
+    <div>
+      <p>idがありません</p>
+    </div>
+  );
 }
 
 export default page;

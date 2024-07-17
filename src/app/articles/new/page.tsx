@@ -14,6 +14,11 @@ const CreateBlogPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!id) {
+      alert("idは必須です");
+      return;
+    }
+
     setLoading(true);
 
     await createArticle(id, title, content);
