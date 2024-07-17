@@ -26,7 +26,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           Technology
         </Link>
         <Link
-          href="#"
+          href={`articles/${article.id}`}
           className="text-slate-900 text-3xl font-bold hover:text-gray-700 pb-4"
         >
           {article.title}
@@ -37,7 +37,10 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
             ? article.content.substring(0, 70) + "..."
             : article.content}
         </Link>
-        <Link href="#" className="text-pink-800 hover:text-black">
+        <Link
+          href={`articles/${article.id}`}
+          className="text-pink-800 hover:text-black"
+        >
           続きを読む
         </Link>
       </div>
