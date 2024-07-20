@@ -8,7 +8,7 @@ const Article = async ({ params }: { params: { id: string } }) => {
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  const res = await fetch(`${API_URL}/api/${params.id}`, { cache: "no-store" });
+  const res = await fetch(`${API_URL}/api/blog/${params.id}`, { cache: "no-store" });
   const detailArticle = await res.json();
 
   return (
